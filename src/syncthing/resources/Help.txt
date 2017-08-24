@@ -1,0 +1,43 @@
+Author: Raich Kris
+
+Outputs own device ID when started without arguments
+
+Arguments:
+    Modes:
+    --add-device
+       Needs: remote-device-id & remote-device-name
+
+    --remove-device
+        Needs: remote-device-id
+
+    --add-folder
+        Needs: folder-name & folder-path
+        Optional: folder-id (is generated if not present)
+
+    --remove-folder
+        Needs: folder-id
+
+    --add-dev-to-folder
+        Needs: remote-device-id & folder-id
+
+    --remove-dev-from-folder
+        Needs: remote-device-id & folder-id
+
+        Note: Only one mode can be performed at a time
+
+    Data:
+    --remote-device-id={ID of remote revice}
+    --remote-device-name={Displayed name of remote device}
+    --folder-name={Displayed name of shared folder}
+    --folder-id={Unique folder ID}
+    --folder-path={Full (absolute) path of shared Folder, may contain no spaces (to be fixed)}
+
+    Util:
+    --help 
+        Shows this text
+    --quiet 
+        Disables output
+    --restart 
+        Restarts Syncthing (to load new configuration) 
+    --shutdown
+        Terminates Syncthing
