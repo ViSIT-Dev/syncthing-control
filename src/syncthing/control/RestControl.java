@@ -36,7 +36,8 @@ public class RestControl {
         URL url = new URL("http://" + address + path);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod(method);
-        addAPIKey(connection);
+        connection.setRequestProperty("X-API-Key", apiKey);
+        connection.setUseCaches(false);
         int responsecode = connection.getResponseCode();
         return Util.inputStreamToString(connection.getInputStream());
     }
@@ -80,14 +81,6 @@ public class RestControl {
     public String getLog() throws MalformedURLException, IOException {
         return requestServer("/rest/system/log", "GET");
     }
-
-    private void addAPIKey(HttpURLConnection connection) {
-        connection.setRequestProperty("X-API-Key", apiKey);
-        connection.setUseCaches(false);
-//        connection.setDoOutput(true);
-    }
-
-    
 
 
 }
