@@ -38,25 +38,7 @@ public class SyncthingControl {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-    
-/*
-        args = new String[]{
-//            P_MODE_REMOVE_FOLDER,
-            P_MODE_ADD_FOLDER,
-//            P_MODE_ADD_DEVICE,
-//            P_MODE_REMOVE_DEVICE,
-//            P_MODE_ADD_DEV_TO_FOLDER,
-//            P_MODE_REMOVE_DEV_FROM_FOLDER,
-            "--remote-device-id=UVVI2NO-E2XGZBP-WNWJLX4-XZBFV62-W777GAV-KVZFZSM-UXWJ3JX-Y7WH7AO",
-//            "--remote-device-name=remName",
-            "--folder-name=test12",
-            "--folder-id=r23mk-hxuqn",
-            "--folder-path=C:\\Users\\raichkrispin.KUFSTEIN\\test12n",
-            "--help",
-//            "--quiet",
-        };
-// */
-        
+            
         try {
             dirtyMain(args);
         } catch (Exception e) {
@@ -153,8 +135,6 @@ public class SyncthingControl {
         }else{
             Util.println("Restart Syncthing to load new configuration (--restart)");
         }
-        
-        
 
     }
     
