@@ -17,9 +17,9 @@ public class Constants {
         "\\AppData\\Local\\Syncthing"
     };
 
-    public static final Pattern MY_ID_PATTERN = Pattern.compile("\"myID\": \"([A-Z0-9-]*)\"");
+    public static final Pattern MY_ID_PATTERN = Pattern.compile("\"myID\"\\s*:\\s*\"([A-Z0-9-]*)\"");
     
-    public static final Pattern ID_PATTERN = Pattern.compile("\"id\": \"([A-Z0-9-]*)\"");
+    public static final Pattern ID_PATTERN = Pattern.compile("\"id\"\\s*:\\s*\"([A-Z0-9-]*)\"");
     
     
 }
