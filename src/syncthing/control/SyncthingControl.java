@@ -168,6 +168,13 @@ public class SyncthingControl {
                 return f;
             }
         }
+        
+          File f = new File("/var/syncthing/config/" + CONFIG_FILE_NAME);
+
+            if (f.exists() && f.isFile() && f.canRead()) {
+                return f;
+            }
+        
         return null;
     }
 
