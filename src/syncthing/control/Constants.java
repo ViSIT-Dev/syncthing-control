@@ -13,6 +13,8 @@ public class Constants {
     public static final String[] CONFIG_FILE_LOCATIONS = {
         "/.config/syncthing",
         "/Library/Application Support/Syncthing",
+        "/syncthing",
+        "/var/www/syncthing",
         "\\AppData\\Roaming\\Syncthing",
         "\\AppData\\Local\\Syncthing"
     };
