@@ -160,20 +160,14 @@ public class SyncthingControl {
         //search config file
         String userHome = System.getProperty("user.home");
 
-        for (String currentLocation : CONFIG_FILE_LOCATIONS) {
+        for (String currentLocation : Constants.getConfigFileLocations()) {
 
-            File f = new File(userHome + File.separatorChar + currentLocation + File.separatorChar + CONFIG_FILE_NAME);
+            File f = new File(currentLocation);
 
             if (f.exists() && f.isFile() && f.canRead()) {
                 return f;
             }
         }
-        
-          File f = new File("/var/syncthing/config/" + CONFIG_FILE_NAME);
-
-            if (f.exists() && f.isFile() && f.canRead()) {
-                return f;
-            }
         
         return null;
     }
