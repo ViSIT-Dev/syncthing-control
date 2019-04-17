@@ -49,6 +49,9 @@ public class Arguments {
     public static final String P_MODE_REMOVE_DEV_FROM_FOLDER = "--remove-dev-from-folder";
 
     @CLIArgument(keyOverride = "mode")
+    public static final String P_MODE_SET_HOME_FOLDER_PATH = "--set-home-folder-path";
+
+    @CLIArgument(keyOverride = "mode")
     public static final String P_SHUTDOWN = "--shutdown";
 
     @CLIArgument()

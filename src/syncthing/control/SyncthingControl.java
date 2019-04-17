@@ -119,6 +119,7 @@ public class SyncthingControl {
             case P_MODE_REMOVE_FOLDER: mode = new RemoveFolder(); break;
             case P_MODE_ADD_DEV_TO_FOLDER: mode = new AddDeviceToFolder(); break;
             case P_MODE_REMOVE_DEV_FROM_FOLDER: mode = new RemoveDeviceFromFolder(); break;
+            case P_MODE_SET_HOME_FOLDER_PATH: mode = new SetHomeFolderPath(); break;
             case P_SHUTDOWN: mode = new Shutdown(); break;
             default: 
                 Util.println("No mode selected, start with --help for manual"); 
@@ -158,12 +159,8 @@ public class SyncthingControl {
 
     private static File searchConfigFile() {
         //search config file
-        String userHome = System.getProperty("user.home");
-
         for (String currentLocation : Constants.getConfigFileLocations()) {
-
             File f = new File(currentLocation);
-
             if (f.exists() && f.isFile() && f.canRead()) {
                 return f;
             }

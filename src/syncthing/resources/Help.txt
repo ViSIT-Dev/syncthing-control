@@ -25,6 +25,9 @@ Arguments:
 
         Note: Only one mode can be performed at a time
 
+    --set-home-folder-path
+        Needs: folder-path
+
     Data:
     --remote-device-id={ID of remote revice}
     --remote-device-name={Displayed name of remote device}
