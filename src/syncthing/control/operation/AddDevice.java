@@ -41,13 +41,16 @@ public class AddDevice extends AbstractOperation {
         newElem.setAttribute("name", remoteDeviceName);
         newElem.setAttribute("introducer", "true");
         newElem.setAttribute("skipIntroductionRemovals", "false");
-        newElem.setAttribute("compression", "always");
+        newElem.setAttribute("compression", "metadata");
         Element address = document.createElement("address");
         address.setTextContent("dynamic");
         Element paused = document.createElement("paused");
         paused.setTextContent("false");
+        Element autoAcceptFolders = document.createElement("autoAcceptFolders");
+        autoAcceptFolders.setTextContent("true");
         newElem.appendChild(address);
         newElem.appendChild(paused);
+        newElem.appendChild(autoAcceptFolders);
         Node gui = document.getElementsByTagName("gui").item(0);
         gui.getParentNode().insertBefore(newElem, gui);
 

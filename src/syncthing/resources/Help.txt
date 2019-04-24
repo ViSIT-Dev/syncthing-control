@@ -25,9 +25,6 @@ Arguments:
 
         Note: Only one mode can be performed at a time
 
-    --set-home-folder-path
-        Needs: folder-path
-
     Data:
     --remote-device-id={ID of remote revice}
     --remote-device-name={Displayed name of remote device}
@@ -36,6 +33,8 @@ Arguments:
     --folder-path={Full (absolute) path of shared Folder, may contain no spaces (to be fixed)}
 
     Util:
+    --get-pending-devices
+        Returns Json with pending devices
     --help 
         Shows this text
     --quiet 
