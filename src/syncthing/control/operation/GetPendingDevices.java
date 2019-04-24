@@ -3,6 +3,7 @@ package syncthing.control.operation;
 import java.util.Map;
 import org.w3c.dom.Document;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+import syncthing.control.RestControl;
 
 /**
  *
@@ -10,15 +11,19 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
  */
 public class GetPendingDevices extends AbstractOperation {
 
+    private String output;
+    
     @Override
     public void execute(Map<String, String> arguments, Document document) throws Exception {
-          throw new NotImplementedException();
+        RestControl rc = RestControl.getInstance();
+        this.output = "{" + rc.getPendingDevices() + "}";
+        System.out.println( this.output );
     }
 
  
     @Override
     public String toString() {
-        return "Return pending devices in a json";
+        return this.output;
     }
 
     

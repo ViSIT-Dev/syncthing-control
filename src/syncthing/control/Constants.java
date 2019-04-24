@@ -29,5 +29,6 @@ public class Constants {
     
     public static final Pattern ID_PATTERN = Pattern.compile("\"id\"\\s*:\\s*\"([A-Z0-9-]*)\"");
     
+    public static final Pattern PENDING_DEVICES_PATTERN = Pattern.compile("\"pendingDevices\"[^\\]]*\\]");
     
 }

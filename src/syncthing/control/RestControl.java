@@ -54,6 +54,12 @@ public class RestControl {
         Matcher m = Constants.MY_ID_PATTERN.matcher(getStatus());
         return m.find() ? m.group(1) : null;
     }
+
+    public String getPendingDevices() throws MalformedURLException, IOException {
+        String configJsonString = requestServer("/rest/system/config", "GET");
+        Matcher m = Constants.PENDING_DEVICES_PATTERN.matcher(configJsonString);
+        return m.find() ? m.group(0) : null;
+    }
     
     public String checkID(String idToCheck) throws IOException{
         String res = requestServer("/rest/svc/deviceid?id=" + idToCheck, "GET");
